@@ -194,6 +194,6 @@ TASKFLOW-/
 
 <div align="center">
 
-Made with 💜 · **TaskFlow** — Plan Your Day. Focus on What Matters. Achieve More.
+Made with 💜 · ** TaskFlow ** — Plan Your Day. Focus on What Matters. Achieve More.
 
 </div>
