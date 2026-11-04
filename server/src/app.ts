@@ -3,7 +3,9 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import { ZodError } from 'zod';
-import { config } from './config.js';
+import mongoose from 'mongoose';
+import { config, emailConfigured, pushConfigured } from './config.js';
+import { schedulerMode } from './services/reminders.js';
 import { requireAuth } from './middleware/auth.js';
 import authRoutes from './routes/auth.js';
 import taskRoutes from './routes/tasks.js';
@@ -17,7 +19,16 @@ export function createApp() {
   app.use(cors({ origin: config.clientOrigin.split(',').map((s) => s.trim()) }));
   app.use(express.json({ limit: '1mb' }));
 
-  app.get('/api/health', (_req, res) => res.json({ ok: true }));
+  app.get('/api/health', (_req, res) => {
+    const db = mongoose.connection.readyState === 1 ? 'connected' : 'disconnected';
+    res.status(db === 'connected' ? 200 : 503).json({
+      ok: db === 'connected',
+      db,
+      email: emailConfigured() ? 'configured' : 'not_configured',
+      push: pushConfigured() ? 'configured' : 'not_configured',
+      scheduler: schedulerMode(),
+    });
+  });
   app.use(
     '/api/auth',
     rateLimit({ windowMs: 15 * 60_000, limit: 100, standardHeaders: true, legacyHeaders: false, skip: () => process.env.NODE_ENV === 'test' }),

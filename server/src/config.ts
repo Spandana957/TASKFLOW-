@@ -8,7 +8,7 @@ function required(name: string, fallback?: string): string {
 
 export const config = {
   port: Number(process.env.PORT ?? 4000),
-  mongoUri: required('MONGODB_URI', process.env.NODE_ENV === 'test' ? 'mongodb://unused' : undefined),
+  mongoUri: process.env.MONGODB_URI ?? '',
   jwtSecret: required('JWT_SECRET', process.env.NODE_ENV === 'test' ? 'test-secret' : undefined),
   clientOrigin: process.env.CLIENT_ORIGIN ?? 'http://localhost:5173',
   resendApiKey: process.env.RESEND_API_KEY ?? '',
