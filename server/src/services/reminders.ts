@@ -70,7 +70,7 @@ export async function deliverReminder(reminderId: string) {
     reminder.pushStatus = await sendPush(String(user._id), {
       title: `⏰ ${reminder.title}`,
       body: reminder.message || 'Reminder due now',
-      url: '/reminders',
+      url: '/#/reminders',
     });
   } else reminder.pushStatus = 'skipped';
 
