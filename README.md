@@ -1,199 +1,455 @@
-<div align="center">
+ <div align="center">
 
-<img src="client/public/icon.svg" width="88" alt="TaskFlow logo" />
+<img src="client/public/icon.svg" width="90" alt="TaskFlow Logo" />
 
 # TaskFlow
 
 ### Plan Your Day. Focus on What Matters. Achieve More.
 
-A full-stack smart daily productivity platform — tasks, rich notes, Pomodoro focus, calendar, goals, analytics and **real server-side email reminders**.
+**A modern, full-stack productivity platform designed to help you organize tasks, manage projects, build better habits, and achieve your goals.**
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-taskflow--web-4f46e5?style=for-the-badge&logo=render&logoColor=white)](https://taskflow-web-xyub.onrender.com)
-[![API](https://img.shields.io/badge/API-health-10b981?style=for-the-badge&logo=express&logoColor=white)](https://taskflow-api-t19t.onrender.com/api/health)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Open_TaskFlow-4F46E5?style=for-the-badge)](https://taskflow-web-xyub.onrender.com/)
+[![Backend API](https://img.shields.io/badge/API-Online-10B981?style=for-the-badge)](https://taskflow-api-t19t.onrender.com/api/health)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/nvaltryek-001/TASKFLOW-)
 
-![React](https://img.shields.io/badge/React_18-20232A?logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
-![Node](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis_+_BullMQ-DC382D?logo=redis&logoColor=white)
-![Resend](https://img.shields.io/badge/Resend-000000?logo=maildotru&logoColor=white)
+**Organize Better • Focus Deeper • Accomplish More**
 
 </div>
 
 ---
 
-## 🌐 Live demo
+## 🌐 Live Application
 
-| | URL |
+| Component | Link |
 |---|---|
-| **Web app** | https://taskflow-web-xyub.onrender.com |
-| **API** | https://taskflow-api-t19t.onrender.com |
-| **Health check** | https://taskflow-api-t19t.onrender.com/api/health |
+| **Live Website** | https://taskflow-web-xyub.onrender.com/ |
+| **Backend API** | https://taskflow-api-t19t.onrender.com/ |
+| **API Health Check** | https://taskflow-api-t19t.onrender.com/api/health |
+| **GitHub Repository** | https://github.com/nvaltryek-001/TASKFLOW- |
 
-> Hosted on Render's free tier — the API sleeps after 15 minutes idle, so the **first request can take ~50 seconds** to wake it up.
+> **Hosting note:** The application uses Render's free-tier hosting. Services may sleep after inactivity, so the first request can take approximately 50 seconds or more to respond.
 
-<!-- SCREENSHOTS -->
+## 📖 About TaskFlow
 
-## ✨ Features
+TaskFlow is a full-stack smart productivity and task management application that brings essential productivity tools together in one unified workspace.
 
-<table>
-<tr>
-<td width="50%" valign="top">
+Instead of switching between multiple applications, users can manage their daily activities, organize projects, write notes, track productivity, schedule reminders, and monitor personal goals from a single platform.
 
-### 📋 Tasks
-- Full CRUD with **Low / Medium / High / Urgent** priorities
-- Due dates, tags, estimates, status
-- **Recurring tasks** — daily, weekdays, weekly, monthly
-- Search, filter by status/priority/tag, sort
+The application combines a responsive React frontend with a Node.js backend, MongoDB database, and Redis-powered background job processing.
 
-### 📝 Smart notes
-- Rich text: bold, italic, underline, strike, headings, lists, quotes
-- **Highlighting**, color labels, pinning
-- Autosave · sanitized with DOMPurify
+### 🎯 Project Objectives
 
-### ⏱️ Focus & time tracking
-- Pomodoro with configurable focus / short / long breaks
-- Stopwatch + manual entries
-- Sessions logged per task
+- Simplify everyday task and project management.
+- Improve productivity through structured planning.
+- Encourage focused work using Pomodoro sessions.
+- Track progress through goals and analytics.
+- Automate reminders and notifications.
+- Provide a responsive experience across desktop and mobile devices.
 
-</td>
-<td width="50%" valign="top">
+---
 
-### 🔔 Reminders & notifications
-- Custom date/time, per-channel email · push · in-app
-- **Resend** email to the user's registered address
-- BullMQ + Redis scheduling, cancel, snooze
-- Duplicate prevention & honest delivery status
-- In-app notification center + Web Push
+## ✨ Key Features
 
-### 📅 Calendar · 🎯 Goals · 📊 Analytics
-- Day / week / month views
-- Daily & weekly goals that track themselves
-- Charts computed from real activity
+### 📋 1. Advanced Task Management
+- Create, update, delete, and organize tasks.
+- Four priority levels: Low, Medium, High, and Urgent.
+- Task deadlines, tags, estimated duration, and status.
+- Recurring tasks: daily, weekdays, weekly, and monthly.
+- Search, sorting, and filtering options.
 
-### 🎨 Experience
-- Light / dark / system themes
-- Responsive with a mobile bottom nav
-- JWT auth, per-user data isolation
+### 📝 2. Smart Notes
+- Rich-text editing experience.
+- Bold, italic, underline, headings, and lists.
+- Highlighting and color labels.
+- Pin important notes.
+- Automatic saving and content sanitization.
 
-</td>
-</tr>
-</table>
+### ⏱️ 3. Focus & Time Tracking
+- Pomodoro productivity timer.
+- Configurable focus and break sessions.
+- Stopwatch functionality.
+- Manual time-entry tracking.
+- Record focus sessions against tasks.
 
-## 🏗️ Architecture
+### 🔔 4. Smart Reminders & Notifications
+- Schedule custom date-and-time reminders.
+- Email reminders through Resend.
+- Browser push notifications.
+- In-app notification center.
+- Reminder cancellation and snoozing.
+- Redis and BullMQ background scheduling.
+- Duplicate reminder prevention.
+
+### 📅 5. Calendar Management
+- Day, week, and month calendar views.
+- Visual task scheduling.
+- Track upcoming deadlines.
+- Organize activities by date.
+
+### 🎯 6. Goals & Productivity
+- Set daily and weekly goals.
+- Monitor goal completion.
+- Track productivity progress.
+- Connect goals with everyday activities.
+
+### 📊 7. Analytics Dashboard
+- Visualize productivity trends.
+- Monitor completed and pending tasks.
+- Review activity statistics.
+- Understand productivity patterns.
+
+### 🎨 8. Modern User Experience
+- Clean and modern interface.
+- Light, dark, and system themes.
+- Responsive desktop and mobile layouts.
+- Mobile-friendly navigation.
+- Secure authentication and user-specific data.
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+|---|---|
+| Frontend | React 18, TypeScript |
+| Build Tool | Vite |
+| Styling | Tailwind CSS |
+| State Management | Zustand |
+| Backend | Node.js, Express.js |
+| Backend Language | TypeScript |
+| Database | MongoDB Atlas, Mongoose |
+| Queue & Background Jobs | Redis, BullMQ |
+| Authentication | JWT |
+| Email Service | Resend |
+| Push Notifications | Web Push |
+| Testing | Vitest, Supertest |
+| Deployment | Render |
+
+---
+
+## 🏗️ System Architecture
+
+TaskFlow follows a client-server architecture with dedicated database, background job, and notification services.
 
 ```mermaid
-flowchart LR
-  U[Browser<br/>React + Vite] -- REST + JWT --> A[Express API<br/>Render]
-  A --> M[(MongoDB Atlas)]
-  A --> Q[(Redis<br/>BullMQ)]
-  Q -- due job --> W[Reminder worker]
-  W --> R[Resend<br/>email]
-  W --> P[Web Push]
-  W --> N[(In-app<br/>notifications)]
+flowchart TB
+    U["User"]
+    FE["React + Vite Frontend"]
+    API["Node.js + Express API"]
+    AUTH["JWT Authentication"]
+    DB[("MongoDB Atlas")]
+    REDIS[("Redis")]
+    QUEUE["BullMQ Job Queue"]
+    WORKER["Reminder Worker"]
+    EMAIL["Resend Email Service"]
+    PUSH["Web Push Notifications"]
+    NOTIFY["In-App Notifications"]
+
+    U --> FE
+    FE --> API
+    API --> AUTH
+    API --> DB
+    API --> REDIS
+    REDIS --> QUEUE
+    QUEUE --> WORKER
+    WORKER --> EMAIL
+    WORKER --> PUSH
+    WORKER --> DB
+    FE --> NOTIFY
+    API --> NOTIFY
 ```
 
-### How reminders work
+### Architecture Overview
 
-1. `POST /api/reminders` saves the reminder with a unique `(user, dedupeKey)` index — the same task at the same minute returns `409`.
-2. A BullMQ delayed job is queued with `jobId = reminderId` (no duplicate jobs). Without Redis, a MongoDB poller runs every 30s.
-3. At fire time the reminder is atomically claimed (`scheduled → processing`), so it can never be sent twice.
-4. The recipient is **always the authenticated user's registered email** — never taken from the request.
-5. Status is recorded honestly: `sent` only when Resend returns a message id; otherwise `failed` (with the error) or `not_configured`.
+1. **Frontend:** React provides the user interface and communicates with the backend through REST APIs.
+2. **Backend:** Express handles authentication, business logic, task operations, and application services.
+3. **Database:** MongoDB Atlas stores user accounts, tasks, notes, reminders, goals, and activity records.
+4. **Queue:** Redis and BullMQ manage background reminder jobs.
+5. **Notifications:** Resend handles email delivery, while Web Push and the in-app notification system provide additional notification channels.
 
-## 🚀 Deployment (Render)
+### Reminder Processing Workflow
 
-| Service | Type | Root | Build | Start |
-|---|---|---|---|---|
-| `taskflow-api` | Web Service (Node 22) | repo root | `cd server && npm install --include=dev && npm run build` | `cd server && npm start` |
-| `taskflow-web` | Static Site | repo root | `cd client && npm install --include=dev && npm run build` | publish `client/dist` |
-| `taskflow-redis` | Key Value | — | — | — |
+1. The user creates a reminder.
+2. The backend stores the reminder in MongoDB.
+3. A background job is scheduled through BullMQ.
+4. When the reminder becomes due, the worker processes it.
+5. The notification is delivered through the configured channels.
+6. Delivery status is recorded in the database.
 
-### Environment variables
+---
 
-**`taskflow-api`**
+## 🔐 Security & Reliability
 
-| Variable | Required | Notes |
-|---|:---:|---|
-| `MONGODB_URI` | ✅ | MongoDB Atlas connection string |
-| `JWT_SECRET` | ✅ | Long random string |
-| `RESEND_API_KEY` | 📧 | Resend key with *Sending access* |
-| `EMAIL_FROM` | 📧 | Sender on a verified Resend domain (e.g. `TaskFlow <reminders@yourdomain.com>`) |
-| `CLIENT_ORIGIN` | ✅ | Frontend URL (CORS) |
-| `REDIS_URL` | ⚙️ | Enables BullMQ; falls back to the MongoDB poller |
-| `VAPID_PUBLIC_KEY` / `VAPID_PRIVATE_KEY` / `VAPID_SUBJECT` | ⚙️ | Web Push |
+TaskFlow includes several security and reliability measures:
 
-**`taskflow-web`** — `VITE_API_URL` = API origin.
+- JWT-based authentication.
+- User-specific data access.
+- Password hashing.
+- Server-side validation.
+- Sanitized rich-text content.
+- Environment-based secret management.
+- Duplicate reminder prevention.
+- Reminder delivery status tracking.
 
-> 🔒 Secrets live only in Render's environment settings — never in the repo or the frontend bundle.
+**Important:** Production credentials and API keys must be stored in backend environment variables, never committed to GitHub or exposed in frontend code.
 
-## 💻 Run locally (Windows PowerShell)
+---
 
-```powershell
-git clone https://github.com/nvaltryek-001/TASKFLOW-.git
-cd TASKFLOW-
+## 🚀 Deployment Architecture
 
-# API
-cd server
-npm install
-Copy-Item .env.example .env   # then fill in MONGODB_URI, JWT_SECRET, RESEND_API_KEY, EMAIL_FROM
-npm run dev                   # http://localhost:4000
+The application is deployed using Render.
 
-# Web (new window)
-cd TASKFLOW-\client
-npm install
-npm run dev                   # http://localhost:5173
-```
-
-```powershell
-cd server; npm test           # API tests (mongodb-memory-server)
-cd ..\client; npm run typecheck; npm run build
-```
-
-## 📡 API
-
-All routes except register, login and health need `Authorization: Bearer <token>`.
-
-| Method | Endpoint | Purpose |
+| Service | Deployment | Configuration |
 |---|---|---|
-| `POST` | `/api/auth/register` · `/api/auth/login` | Auth |
-| `GET` `PATCH` | `/api/auth/me` · `/api/auth/settings` | Profile & preferences |
-| `GET` | `/api/auth/integrations` | Which integrations are configured |
-| `GET` `POST` `PATCH` `DELETE` | `/api/tasks[/:id]` | Tasks (`?search&status&priority&tag&from&to&sort`) |
-| `GET` `POST` `PATCH` `DELETE` | `/api/notes[/:id]` | Notes |
-| `GET` `POST` | `/api/reminders` | List / schedule reminders |
-| `POST` | `/api/reminders/:id/cancel` · `/snooze` | Cancel / snooze |
-| `GET` `POST` | `/api/notifications` · `/read-all` | Notification history |
-| `GET` `POST` `DELETE` | `/api/time` | Time entries |
-| `GET` `POST` `PATCH` `DELETE` | `/api/goals` | Goals |
-| `GET` | `/api/analytics?days=14` | Analytics |
-| `GET` | `/api/health` | DB / email / scheduler status |
+| TaskFlow Web | Render Static Site | React production build |
+| TaskFlow API | Render Web Service | Node.js backend |
+| MongoDB | MongoDB Atlas | Cloud database |
+| Redis | Render Key Value | Background job processing |
+| Email | Resend | Email delivery |
 
-## 📁 Project structure
+### Live Backend Health
 
+The backend health endpoint:
+
+https://taskflow-api-t19t.onrender.com/api/health
+
+Verified connection status at deployment:
+
+- MongoDB: Connected
+- Email: Configured
+- Web Push: Configured
+- Scheduler: BullMQ
+
+---
+
+## ⚙️ Environment Configuration
+
+### Backend Environment Variables
+
+Configure these in the backend service environment settings.
+
+| Variable | Purpose |
+|---|---|
+| `MONGODB_URI` | MongoDB Atlas connection |
+| `JWT_SECRET` | Authentication token security |
+| `RESEND_API_KEY` | Email service API key |
+| `EMAIL_FROM` | Email sender address |
+| `CLIENT_ORIGIN` | Frontend origin for CORS |
+| `REDIS_URL` | Redis connection |
+| `VAPID_PUBLIC_KEY` | Web Push public key |
+| `VAPID_PRIVATE_KEY` | Web Push private key |
+| `VAPID_SUBJECT` | Web Push contact identity |
+
+### Frontend Environment Variable
+
+```env
+VITE_API_URL=https://taskflow-api-t19t.onrender.com
 ```
+
+Never expose backend secrets through frontend environment variables.
+
+---
+
+## 💻 Run Locally
+
+### Prerequisites
+
+Install the following:
+
+- Node.js 22 or compatible version
+- npm
+- Git
+- MongoDB Atlas account or local MongoDB
+- Redis (optional for local background queue processing)
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/nvaltryek-001/TASKFLOW-.git
+
+cd TASKFLOW-
+```
+
+### 2. Configure the Backend
+
+```bash
+cd server
+
+npm install
+```
+
+Create a `.env` file using the provided example:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Configure the required environment variables in `server/.env`.
+
+### 3. Start the Backend
+
+```bash
+npm run dev
+```
+
+### 4. Configure the Frontend
+
+Open a second terminal:
+
+```bash
+cd TASKFLOW-/client
+
+npm install
+```
+
+Create the frontend `.env` file if required:
+
+```env
+VITE_API_URL=http://localhost:4000
+```
+
+### 5. Start the Frontend
+
+```bash
+npm run dev
+```
+
+Open the local frontend URL displayed by Vite, usually:
+
+http://localhost:5173/
+
+---
+
+## 🧪 Testing & Build
+
+### Backend
+
+```bash
+cd server
+
+npm test
+npm run build
+```
+
+### Frontend
+
+```bash
+cd client
+
+npm run typecheck
+npm run build
+```
+
+---
+
+## 📡 API Documentation
+
+The backend exposes REST API endpoints for the application's core features.
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/auth/register` | Register a new account |
+| POST | `/api/auth/login` | Authenticate a user |
+| GET | `/api/auth/me` | Retrieve user profile |
+| PATCH | `/api/auth/me` | Update profile |
+| PATCH | `/api/auth/settings` | Update preferences |
+| GET | `/api/auth/integrations` | Check integrations |
+| GET / POST | `/api/tasks` | List or create tasks |
+| PATCH / DELETE | `/api/tasks/:id` | Update or delete a task |
+| GET / POST | `/api/notes` | List or create notes |
+| PATCH / DELETE | `/api/notes/:id` | Update or delete notes |
+| GET / POST | `/api/reminders` | List or schedule reminders |
+| POST | `/api/reminders/:id/cancel` | Cancel reminder |
+| POST | `/api/reminders/:id/snooze` | Snooze reminder |
+| GET / POST | `/api/notifications` | Notifications |
+| GET / POST / DELETE | `/api/time` | Time tracking |
+| GET / POST / PATCH / DELETE | `/api/goals` | Goal management |
+| GET | `/api/analytics?days=14` | Productivity analytics |
+| GET | `/api/health` | Backend health status |
+
+Authenticated endpoints require:
+
+```http
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+---
+
+## 📁 Project Structure
+
+```text
 TASKFLOW-/
-├── client/                 React + Vite frontend
-│   ├── public/             icon, service worker (Web Push)
+│
+├── client/
+│   ├── public/
+│   │   ├── icon.svg
+│   │   └── service-worker files
+│   │
 │   └── src/
-│       ├── components/     Layout, TaskForm, TaskItem, UI kit
-│       ├── pages/          Dashboard, Tasks, Calendar, Focus, Notes, Goals, Analytics, Reminders, Settings
-│       ├── store/          Zustand stores (auth, tasks, UI)
-│       └── lib/            API client, notifications
-└── server/                 Express + TypeScript API
-    ├── src/
-    │   ├── models/         Mongoose schemas
-    │   ├── routes/         auth, tasks, notes, reminders, productivity
-    │   ├── services/       email (Resend), push, reminders (BullMQ), recurrence
-    │   └── middleware/     JWT auth
-    └── test/               Vitest + Supertest
+│       ├── components/
+│       ├── pages/
+│       ├── store/
+│       ├── lib/
+│       └── assets/
+│
+├── server/
+│   ├── src/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── middleware/
+│   │   └── index.ts
+│   │
+│   ├── test/
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── README.md
+└── .gitignore
 ```
+
+---
+
+## 🗺️ Future Improvements
+
+Potential enhancements for future releases:
+
+- Google Calendar integration.
+- AI-powered task recommendations.
+- Advanced productivity insights.
+- Team collaboration and shared workspaces.
+- Calendar synchronization.
+- Advanced reporting and exports.
+- Native mobile application.
+
+---
+
+## 🤝 Contributing
+
+Contributions, ideas, bug reports, and feature suggestions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Test your implementation.
+5. Submit a pull request.
+
+---
+
+## 📄 License
+
+This project is available for educational and development purposes. Add an appropriate open-source license file if you intend to distribute it under a specific license.
+
+---
 
 <div align="center">
 
-Made with 💜 · **TaskFlow** — Plan Your Day. Focus on What Matters. Achieve More.
+## 💜 TaskFlow
+
+### Plan Your Day. Focus on What Matters. Achieve More.
+
+**Built to make everyday productivity simpler, smarter, and more organized.**
+
+[🌐 Open TaskFlow](https://taskflow-web-xyub.onrender.com/) · [💻 GitHub Repository](https://github.com/nvaltryek-001/TASKFLOW-)
 
 </div>
